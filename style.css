@@ -32,8 +32,10 @@ a{
     color: var(--primary-text-color);
 }
 ul{
+   
     list-style: none;
 }
+
 /* головна сторінка */
 .section{
     width: 1600px;
@@ -47,16 +49,20 @@ ul{
    padding-right: 15px;
    margin-left: auto;
    margin-right: auto;
+   
 }
 /* Header */
+
+.section.header{
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
 .container.nav{
     display: flex;
     align-items: center;
 }
-section.header{
-    padding-top: 24px;
-    padding-bottom: 25px;
-}
+
 .logo{
     font-family: 'Raleway';
 font-style: normal;
@@ -70,25 +76,22 @@ color: #212121;
 
 }
 
+.logo span{
+color:var(--accent-color) ;
+}
 
-
-.container{
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+nav{
+    margin-left: 93px;
 }
 
 .nav-list{
     display: flex;
 }
 
-.logo span{
-color:var(--accent-color) ;
-}
-nav{
-    margin-left: 93px;
+/* Задаємо цю властивість всім окрім першого символа */
+.nav-item:not(:first-child){
+    margin-left: 54px;
+
 }
 
 .nav-link,
@@ -111,10 +114,15 @@ color:var(--primary-text-color);
     color: var(--accent-color);
 }
 
-.contacts-link{
+.contacts-list{
     display: flex;
     margin-left: auto;
 }
+
+.contact-item:not(:first-child){
+   margin-left: 50px;
+}
+
 .contact-link{
     color: var(--secondary-text-color);
    
@@ -148,6 +156,7 @@ letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--thirdly-text-color);
 }
+
 /* Секція особливості */
 .fetures{
 display: flex;
